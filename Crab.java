@@ -11,9 +11,18 @@ public class Crab extends Actor
         {
             turn(17);
         }
+        
+        if(Greenfoot.getRandomNumber(100)<10)
+        {
+            turn (Greenfoot.getRandomNumber(91) -45);
+        }
         move();   
+        
+        if(isTouching(Worms.class))
+    {
+        removeTouching(Worms.class);
     }
-    
+}
     public void move( )
     {
         move(5);
