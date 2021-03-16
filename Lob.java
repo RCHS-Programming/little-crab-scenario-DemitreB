@@ -1,9 +1,12 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This class defines a crab. Crabs live on the beach.
+ * Write a description of class Lob here.
+ * 
+ * @author Demitre Beltran 
+ * @version March 16 version 1
  */
-public class Crab extends Actor
+public class Lob extends Actor
 {
     public void act()
     {
@@ -11,7 +14,7 @@ public class Crab extends Actor
             
         move();   
         
-        lookForWorms();
+        lookForCrab();
         
         randomTurn();
     }
@@ -25,11 +28,11 @@ public class Crab extends Actor
      * check whether we have stubled over a worm
      * if we have eat it, do nohing
      */
-    public void lookForWorms()
+    public void lookForCrab()
     {
-        if(isTouching(Worms.class))
+        if(isTouching(Crab.class))
         {
-            removeTouching(Worms.class);
+            removeTouching(Crab.class);
         }
     }
 
@@ -53,5 +56,3 @@ public class Crab extends Actor
             }
     }
 }
-
-
