@@ -30,13 +30,14 @@ public class Lob extends Actor
      */
     public void lookForCrab()
     {
-        if(isTouching(Crab.class))
+        if (canSee(Crab.class))
         {
-            removeTouching(Crab.class);
+            eat(Crab.class);
+            Greenfoot.stop();
         }
     }
-
-    /*
+    
+     /*
      * make the crab turn randomly left or right
      * between 0 and 40 degrees 
      */
@@ -55,4 +56,11 @@ public class Lob extends Actor
                 turn(17);
             }
     }
+    
+    public void lokkForCrab()
+    {
+       
+    }
 }
+
+   
