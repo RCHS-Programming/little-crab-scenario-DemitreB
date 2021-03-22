@@ -30,9 +30,10 @@ public class Lob extends Actor
      */
     public void lookForCrab()
     {
-        if (canSee(Crab.class))
+        if (isTouching(Crab.class))
         {
-            eat(Crab.class);
+            removeTouching(Crab.class);
+            Greenfoot.playSound("au.wav");
             Greenfoot.stop();
         }
     }
@@ -57,10 +58,7 @@ public class Lob extends Actor
             }
     }
     
-    public void lokkForCrab()
-    {
-       
-    }
+    
 }
 
    

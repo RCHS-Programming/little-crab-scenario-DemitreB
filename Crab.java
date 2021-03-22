@@ -5,6 +5,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  */
 public class Crab extends Actor
 {
+    private GreenfootImage image1;
+    private GreenfootImage image2;
+    
+    /*
+     * 
+     */
+    public Crab()
+    {
+        image1 = new GreenfootImage ("crab.png");
+        image2 = new GreenfootImage ("crab2.png");
+        setImage (image1);
+    }
     public void act()
     {
         checkKeyPress();
@@ -26,9 +38,9 @@ public class Crab extends Actor
      */
     public void lookForWorms()
     {
-      if (canSee(Crab.class))
+      if (isTouching(Worms.class))
         {
-            eat(Crab.class);
+            removeTouching(Worms.class);
             Greenfoot.playSound("slurp.wav");
         }
     }
@@ -38,11 +50,11 @@ public class Crab extends Actor
      */
     public void checkKeyPress()
     {
-        if (Greenfoot.isKeyDown("left"))
+        if (Greenfoot.isKeyDown("a"))
         {
             turn (-4);
         } 
-        if (Greenfoot.isKeyDown("right"))
+        if (Greenfoot.isKeyDown("d"))
         {
             turn (4);
         } 

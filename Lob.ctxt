@@ -13,6 +13,4 @@ comment4.target=void\ randomTurn()
 comment4.text=\r\n\ make\ the\ crab\ turn\ randomly\ left\ or\ right\r\n\ between\ 0\ and\ 40\ degrees\ \r\n
 comment5.params=
 comment5.target=void\ turnAtEdge()
-comment6.params=
-comment6.target=void\ lokkForCrab()
-numComments=7
+numComments=6
